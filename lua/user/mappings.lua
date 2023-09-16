@@ -50,7 +50,8 @@ return {
 
     ["<leader><leader>b"] = {
       function()
-        vim.cmd('.g/^$/normal b')
+        -- ( move to next line begining that is not blank, then move to end, then use b to move to next first non-blank char before current cursor position
+        vim.cmd('.g/^$/normal ()b')
         require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
       end,
     },
@@ -70,7 +71,7 @@ return {
 
     ["<leader><leader>k"] = {
       function()
-        vim.cmd('.g/^$/normal b')
+        vim.cmd('.g/^$/normal ()b')
         require'hop'.hint_lines({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
       end,
     },
@@ -82,4 +83,48 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = {
+    -- for hop.nvim
+    ["<leader><leader>w"] = {
+      function()
+        vim.cmd('.g/^$/normal )')
+        require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })
+      end,
+    },
+
+    ["<leader><leader>e"] = {
+      function()
+        vim.cmd('.g/^$/normal )')
+        require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, hint_position = require'hop.hint'.HintPosition.END })
+      end,
+    },
+
+    ["<leader><leader>b"] = {
+      function()
+        -- ( move to next line begining that is not blank, then move to end, then use b to move to next first non-blank char before current cursor position
+        vim.cmd('.g/^$/normal ()b')
+        require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
+      end,
+    },
+
+    ["<leader><leader>a"] = {
+      function()
+        require'hop'.hint_anywhere()
+      end,
+    },
+
+    ["<leader><leader>j"] = {
+      function()
+        vim.cmd('.g/^$/normal )')
+        require'hop'.hint_lines({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })
+      end,
+    },
+
+    ["<leader><leader>k"] = {
+      function()
+        vim.cmd('.g/^$/normal ()b')
+        require'hop'.hint_lines({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
+      end,
+    },
+  }
 }
