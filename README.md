@@ -24,15 +24,23 @@ All my added options/features are list as follows.
 
 Neovim front-end app written by Rust. 
 
-### animation
+#### cursor color
+
+Change neovide cursor color to Water blue.
+
+```
+#AFDFE4
+```
+
+Neovim docs link is as follows,
+
+<https://neovim.io/doc/user/options.html#%27guicursor%27>
+
+#### animation
 
 Out of box features.
 
-Particles.
-
-### cursor color
-
-Change neovide cursor color to Water blue.
+#### particles.
 
 ### nvim-cmp
 
@@ -77,9 +85,11 @@ leader + fW
 
 ### fontLigatures
 
-Default.
+Default feature is enough.
 
 ### F11 fullscreen
+
+This may calse some problem, it even would flash a windows7 window frame in a second! Oh my godness. But I believe it's Microsoft's fault.
 
 ### shortcuts
 
@@ -87,21 +97,15 @@ Default.
 
 ### auto-formated
 
-### cursor color
+This default switch is turned on.
 
-water blue.
+I turned it off.
 
-```
-#AFDFE4
-```
+### better-escape.nvim
 
-Neovim docs link is as follows,
-
-<https://neovim.io/doc/user/options.html#%27guicursor%27>
+By default, this switch is on, that means when we enter `jj` in a fast speed during insert mode, nvim will escape to normal mode.
 
 ### rust
-
-LSP.
 
 rust-analyser.
 
