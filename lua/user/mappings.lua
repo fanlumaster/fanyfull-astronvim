@@ -51,7 +51,7 @@ return {
     ["<leader><leader>b"] = {
       function()
         -- ( move to next line begining that is not blank, then move to end, then use b to move to next first non-blank char before current cursor position
-        vim.cmd('.g/^$/normal ()b')
+        vim.cmd('.g/^$/normal B()b')
         require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
       end,
     },
@@ -102,7 +102,7 @@ return {
     ["<leader><leader>b"] = {
       function()
         -- ( move to next line begining that is not blank, then move to end, then use b to move to next first non-blank char before current cursor position
-        vim.cmd('.g/^$/normal ()b')
+        vim.cmd('.g/^$/normal B()b')
         require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
       end,
     },

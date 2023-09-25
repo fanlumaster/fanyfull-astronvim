@@ -111,4 +111,10 @@ rust-analyser.
 
 Todo.
 
+### Some useful keymaps
+
+Here are some useful keymaps, whether default or not.
+
+- `K`: show the symbol docs. just like show docs when cursor is over the symbol. if we hit the capital `K` twice then we would get carete focused on the pop up windows.
+
 

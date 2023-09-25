@@ -22,7 +22,8 @@ end
 
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
 
-vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#afdfe4')
+-- vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#afdfe4')
+vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#FF92A5')
 
 -- register F11 to toggle fullscreen in normal mode
 if vim.g.neovide == true then
