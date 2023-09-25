@@ -15,6 +15,8 @@ return {
     shellxquote = "",
     scrolloff = 0,
     guicursor="n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0",
+    foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
+    foldmethod = "expr",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

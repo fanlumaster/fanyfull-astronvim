@@ -126,5 +126,9 @@ return {
         require'hop'.hint_lines({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
       end,
     },
+
+    -- Stay in indent mode
+    ["<"] = { "<gv", desc = "Unindent line" },
+    [">"] = { ">gv", desc = "Indent line" },
   }
 }
