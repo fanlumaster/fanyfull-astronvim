@@ -7,7 +7,13 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
-    guifont = "CaskaydiaCove Nerd Font:h13",
+    -- guifont = "CaskaydiaCove Nerd Font:h14",
+    -- guifont = {"CaskaydiaCove Nerd Font", "微软雅黑", ":h14"},
+    -- 中文的效果是如何的呢？确实有点太粗了，怎么办呢？
+    -- guifont = {"CaskaydiaCove Nerd Font", "Maple Mono SC NF", ":h14"},
+    guifont = {"CaskaydiaCove Nerd Font", "Source Han Sans CN", "Maple Mono SC NF", ":h14"},
+    -- guifont = "Source Han Sans CN:h14",
+    -- guifont = "Microsoft YaHei:h14",
     -- set terminal to powershell7
     shell = "pwsh",
     shellcmdflag = "-command",

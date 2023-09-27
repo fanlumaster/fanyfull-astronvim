@@ -2,6 +2,8 @@
 
 ## preface
 
+中文的效果是怎么样的呢？似乎有点粗了。将军直接。
+
 Maybe some people would say, it is useless for coding to spend such a lot of time on configuring code editors.
 
 Who cares?

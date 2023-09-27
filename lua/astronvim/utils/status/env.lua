@@ -78,7 +78,7 @@ M.separators = astronvim.user_opts("heirline.separators", {
 })
 
 M.attributes = astronvim.user_opts("heirline.attributes", {
-  buffer_active = { bold = true, italic = true },
+  buffer_active = { bold = true, italic = false },
   buffer_picker = { bold = true },
   macro_recording = { bold = true },
   git_branch = { bold = true },
