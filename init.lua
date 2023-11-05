@@ -29,3 +29,11 @@ vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#FF92A5')
 if vim.g.neovide == true then
     vim.api.nvim_set_keymap('n', '<F11>', ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
+
+-- enable auto reload when file changed in other editors
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" }
+})
+
