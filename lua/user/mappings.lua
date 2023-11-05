@@ -3,6 +3,9 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+
+local color_switch = 0
+
 return {
   -- first key is the mode
   n = {
@@ -78,6 +81,18 @@ return {
 
     ["<leader>py"] = { "<cmd>TermExec cmd=\"python %\"<cr>", desc = "Run python codes" },
 
+    -- toggle color between 雷姆蓝 and 拉姆粉
+    ["<leader><leader>t"] = {
+      function()
+        if (color_switch == 1) then
+          color_switch = 0
+          vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#ffb6c1')
+        else
+          color_switch = 1
+          vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#91bef0')
+        end
+      end,
+    },
   },
   t = {
     -- setting a mapping to false will disable it

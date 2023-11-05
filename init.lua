@@ -23,12 +23,21 @@ end
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
 
 -- vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#afdfe4')
-vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#FF92A5')
+vim.cmd('highlight Cursor gui=NONE guifg=bg guibg=#ffb6c1')
 
 -- register F11 to toggle fullscreen in normal mode
 if vim.g.neovide == true then
     vim.api.nvim_set_keymap('n', '<F11>', ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
+
+-- copy relative path
+vim.cmd([[
+command! -nargs=0 CpRelativePath lua require("user.fanyutils").copy_relative_path()
+]])
+-- copy relative path
+vim.cmd([[
+command! -nargs=0 CpFileName lua require("user.fanyutils").copy_current_filename()
+]])
 
 -- enable auto reload when file changed in other editors
 vim.o.autoread = true
